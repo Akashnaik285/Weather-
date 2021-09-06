@@ -1,1 +1,55 @@
+ body{
+        margin: 0%;
+        padding: 0%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('https://images.unsplash.com/photo-1628583768483-a762d81fa84c?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYzMDk0MzM0NQ&ixlib=rb-1.2.1&q=85');
+        background-size: cover;
+        font-family: sans-serif;
+        flex-direction: column;
+    }
+    table
+    {
+        border: 1pt solid #fff;
+        border-collapse: collapse;
+        font-size: 20px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(8px);
+        /* filter: blur(8px); */
+        text-align: center;
+       
+    }
 
+
+    td,th{
+        padding: 30px;
+        border: 1px solid rgb(255, 255, 255);
+        transition: 0.5s ease all;
+    }
+    th{
+        color: rgb(0, 247, 255);
+        background-color: #29292929;
+    }
+    td:hover ,th:hover
+    {
+        background: #292929;
+        cursor: pointer;
+       
+    }
+    .time
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    .time h1
+    {
+        font-size: 50px;
+        color: #fff;
+        font-weight: 100;
+        font-style:;
+    }
