@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image:url(bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+}
+table
+{
+    background-color: #0005;
+    backdrop-filter: blur(20px);
+}
+table,td,th
+{
+    text-align: center;
+    font-size: 2vw;
+    color: #fff;
+    font-family: 'Urbanist', sans-serif;
+    padding: 20px;
+    border: 1px solid #fff;
+    border-collapse: collapse;
+    
+    
+}
+#footer
+{
+    font-family: 'Urbanist', sans-serif;
+    color:#ffffff;
+    font-size: 3vw;
+    text-align: center;
+}
