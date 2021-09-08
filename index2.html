@@ -8,43 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
 </head>
-<style>
-    body{
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-image:url(bg2.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        flex-direction: column;
-    }
-    table
-    {
-        background-color: #0005;
-        backdrop-filter: blur(20px);
-    }
-    table,td,th
-    {
-        text-align: center;
-        font-size: 2vw;
-        color: #fff;
-        font-family: 'Urbanist', sans-serif;
-        padding: 20px;
-        border: 1px solid #fff;
-        border-collapse: collapse;
-        
-        
-    }
-    #footer
-    {
-        font-family: 'Urbanist', sans-serif;
-        color:#ffffff;
-    }
-</style>
+
 <body id="b">
     
     <table>
@@ -69,56 +35,10 @@
     </table>
     <h1 id="footer"></h1>
 </body>
-<script>
-    let loc=window.localStorage.getItem('place');
-    console.log(loc);
-    //clear local storage
-    localStorage.clear();
-    const url="https://api.weatherapi.com/v1/current.json?key=8da6835d80bb4bf2a51134016202412&q="+loc+"&aqi=no";
-    let windData;
-    let conditionData;
-    let tempData;
-    function getData()
-    {
-        
-        fetch(url).then((response)=>
-            {
-               
-                return response.json();
-            }).then((data)=>
-            {
-                console.log(data);
-                conditionData=data.current.condition.text;
-                windData=data.current.wind_kph;
-                tempData=data.current.temp_c;
-                let windCell=document.getElementById("wind");
-                let tempCell=document.getElementById("temperature");
-                let conditionCell=document.getElementById("condition");
-                console.log(conditionData,windData,tempData);
-
-                windCell.innerText=windData+"km/hr";
-                tempCell.innerHTML=tempData+"&deg;C";
-                conditionCell.innerText=conditionData;
-                
-                
-                //Changing Background Image According to Condition 
-                
-             
-                 if(conditionData=='sunny')
-                     document.body.style.backgroundImage = url('https://source.unsplash.com/1600x900/?sunny');
-                  
-                        
-                 else if(conditionData==="Partly couldy")
-                    document.body.style.backgroundImage = url('https://source.unsplash.com/1600x900/?couldy');
-                      
-                    
-             let footer=document.getElementById("footer");
-             footer.innerText=data.location.name +", "+data.location.region;   
-            })
-    }
-    
-    getData();
+<script src="script2.js">
   
+    
+   
 
 </script>
 </html>
